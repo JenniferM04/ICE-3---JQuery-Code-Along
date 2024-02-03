@@ -29,26 +29,39 @@ let tuesdayArray = new Array(10).fill("Tuesday!");
 console.log(`Class is on ${tuesdayArray}`);
 
 
-/**
- * squares two nums
- * @param {*} x the number to be squared
- * @returns the squared value of the number
- */
-function square(x)
-{
-    return x * x;
-}
+// /**
+//  * squares two nums
+//  * @param {*} x the number to be squared
+//  * @returns the squared value of the number
+//  */
+// function square(x)
+// {
+//     return x * x;
+// }
 
-let nums = new Array(1, 33, 22, 5);
-let squaredNums = nums.map(function(value)
-{
-    return square(value);
-}); 
+// let nums = new Array(1, 33, 22, 5);
+// let squaredNums = nums.map(function(value)
+// {
+//     return square(value);
+// }); 
+// console.log(`squared values: ${squaredNums}`);
 
-console.log(`squared values: ${squaredNums}`);
 
 // TODO before hand it: rewrite 
 // let squaredNums = nums.map(function(value)
 // {
 //     return square(value);
 // }); 
+
+
+/**
+ * Squares a number.
+ * @param {*} x - The number to be squared.
+ * @returns {number} - The squared value of the number.
+ */
+const square = x => x * x;
+
+const nums = [1, 33, 22, 5];
+const squaredNums = nums.map(value => square(value));
+
+console.log(`Squared values: ${squaredNums}`);
