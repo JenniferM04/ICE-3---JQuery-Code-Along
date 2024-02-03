@@ -27,3 +27,28 @@ console.log(`New array: ${array2}`);
 // Tuesday
 let tuesdayArray = new Array(10).fill("Tuesday!");
 console.log(`Class is on ${tuesdayArray}`);
+
+
+/**
+ * squares two nums
+ * @param {*} x the number to be squared
+ * @returns the squared value of the number
+ */
+function square(x)
+{
+    return x * x;
+}
+
+let nums = new Array(1, 33, 22, 5);
+let squaredNums = nums.map(function(value)
+{
+    return square(value);
+}); 
+
+console.log(`squared values: ${squaredNums}`);
+
+// TODO before hand it: rewrite 
+// let squaredNums = nums.map(function(value)
+// {
+//     return square(value);
+// }); 
