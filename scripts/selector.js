@@ -47,6 +47,36 @@ function traversingTheDOM()
     $('#list').parents('body').css('font-size', '24px');
 }
 
+function filtering()
+{
+    $('#list').find('li').filter(':even').css('background-color', "#2a9d8f");
+
+    // long function of the shortcut .filter(':even')
+    $('#list').find('li').filter(function (i) 
+    {
+        return i % 2 === 0;
+    }).css('background-color', "red");
+}
+
+
+function addReplaceRemove()
+{
+    $('ul#list li:first').append($("<ul><li>I'm going to be the last item of the first sub-list</li></ul>"));
+    // add to top
+    $('ul#list').prepend($("<li>Prepend</li>"));
+
+    // use after to add elements after another
+    $('.red-box').after("<div class=\"red-box new-box\">New Red box</div>");
+
+    let newText = 'Last night, Darth Vader came down from the planet Vulcan.';
+    $('p.grumpy').replaceWith(`<p>${newText}</p>`);
+
+}
+
+// cssSelectors();
+// traversingTheDom();
+// filtering();
+// addReplaceRemove();
 
 
 
